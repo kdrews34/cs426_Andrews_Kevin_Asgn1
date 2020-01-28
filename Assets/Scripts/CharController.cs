@@ -23,6 +23,9 @@ public class CharController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+            Application.Quit();
+
         if (Input.GetKey(KeyCode.W))
             rb.velocity += this.transform.forward * speed * Time.deltaTime;
         else if (Input.GetKey(KeyCode.S))
